@@ -225,7 +225,7 @@ export default function Contact() {
               <div className="reveal reveal-delay-5" style={{ marginTop: '1.5rem', borderRadius: 'var(--r-lg)', overflow: 'hidden', border: '1px solid var(--gray-200)', boxShadow: 'var(--shadow-sm)' }}>
                 <iframe
                   title="FitClinic Abu Dhabi — Google Maps"
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3631.9554!2d54.37219!3d24.45261!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5e665757a35159%3A0xddb6861f2b34ebfb!2sFitClinic%20Exercise%20and%20Sport%20Medicine%20Medical%20Center!5e0!3m2!1sen!2sae!4v1725000000000!5m2!1sen!2sae"
+                  src="https://maps.google.com/maps?q=Fitclinic+Exercise+and+Sport+Medicine+Medical+Center,+5+Um+Imeem+St,+Al+Bateen,+Abu+Dhabi&output=embed&z=17"
                   width="100%"
                   height="260"
                   style={{ border: 0, display: 'block' }}
