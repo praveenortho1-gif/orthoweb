@@ -448,11 +448,16 @@ input, select, textarea { font-family: inherit; }
   gap: 3rem;
   align-items: center;
 }
-@media (min-width: 1024px) {
+@media (min-width: 900px) {
   .hero-grid {
-    grid-template-columns: 1fr 420px;
+    grid-template-columns: 1fr 380px;
     gap: 4rem;
   }
+}
+
+/* Single-column hero text wrap */
+.hero-text-wrap {
+  max-width: 780px;
 }
 
 /* Hero text */
@@ -561,6 +566,124 @@ input, select, textarea { font-family: inherit; }
   border-radius: var(--r-xl);
   padding: 2rem;
   backdrop-filter: blur(8px);
+  opacity: 1 !important;
+  transform: none !important;
+}
+
+/* ── Credential panel (replaces photo card in hero) ── */
+.hero-cred-panel {
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: var(--r-xl);
+  padding: 2rem;
+  backdrop-filter: blur(10px);
+}
+
+.hero-cred-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+  margin-bottom: 1.5rem;
+}
+
+.hero-cred-avatar {
+  width: 56px;
+  height: 56px;
+  background: var(--teal);
+  border-radius: var(--r-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-heading);
+  font-size: 1rem;
+  font-weight: 800;
+  color: var(--white);
+  flex-shrink: 0;
+  letter-spacing: 0.04em;
+}
+
+.hero-cred-name {
+  font-family: var(--font-heading);
+  font-size: 1.0625rem;
+  font-weight: 700;
+  color: var(--white);
+  margin-bottom: 0.2rem;
+}
+
+.hero-cred-role {
+  font-size: 0.8125rem;
+  color: var(--teal);
+  font-weight: 500;
+}
+
+.hero-cred-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.875rem;
+  margin-bottom: 1.5rem;
+}
+
+.hero-cred-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.875rem;
+  padding: 0.875rem 1rem;
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.07);
+  border-radius: var(--r-md);
+  transition: background var(--t-fast), border-color var(--t-fast);
+}
+
+.hero-cred-item:hover {
+  background: rgba(15,157,154,0.15);
+  border-color: rgba(15,157,154,0.3);
+}
+
+.hero-cred-icon {
+  width: 36px;
+  height: 36px;
+  background: rgba(15,157,154,0.2);
+  border-radius: var(--r-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--teal);
+  flex-shrink: 0;
+}
+
+.hero-cred-item-title {
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: var(--white);
+  margin-bottom: 0.15rem;
+  line-height: 1.3;
+}
+
+.hero-cred-item-sub {
+  font-size: 0.75rem;
+  color: rgba(255,255,255,0.55);
+  line-height: 1.4;
+}
+
+.hero-cred-cta {
+  display: block;
+  text-align: center;
+  padding: 0.75rem;
+  background: rgba(15,157,154,0.15);
+  border: 1px solid rgba(15,157,154,0.3);
+  border-radius: var(--r-md);
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--teal);
+  transition: background var(--t-fast), color var(--t-fast);
+}
+
+.hero-cred-cta:hover {
+  background: var(--teal);
+  color: var(--white);
+  border-color: var(--teal);
 }
 .hero-card-avatar {
   width: 100%;
@@ -877,6 +1000,11 @@ input, select, textarea { font-family: inherit; }
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 1rem;
+}
+@media (min-width: 768px) {
+  .why-cards {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 .why-card {
   padding: 1.5rem;

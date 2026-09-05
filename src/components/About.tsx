@@ -1,18 +1,7 @@
 import { useEffect, useRef } from 'react'
-import { CheckCircle, Award, GraduationCap, MapPin } from 'lucide-react'
+import { CheckCircle, MapPin } from 'lucide-react'
 
-/* Qualifications — no overlap with skills list */
-const CREDENTIALS = [
-  { icon: GraduationCap, text: 'MD Sports Medicine — GGSIPU, New Delhi · Topper, July 2021' },
-  { icon: GraduationCap, text: 'MBBS — Govt. Theni Medical College, Tamil Nadu (2016)' },
-  { icon: Award,         text: 'FIFA Diploma in Football Medicine' },
-  { icon: Award,         text: 'DOH Licensed Specialist · GD-47361' },
-  { icon: Award,         text: 'DHA Licensed Specialist · 22777942' },
-  { icon: Award,         text: 'BLS & ACLS Provider (AHA Accredited)' },
-  { icon: Award,         text: 'Team Doctor & Doping Control Officer — Indian National Tournaments' },
-]
-
-/* Clinical skills — concise, distinct items */
+/* Clinical skills — what Dr. Praveen actually does */
 const SKILLS = [
   'USG-Guided Injections & PRP Therapy',
   'Musculoskeletal Ultrasound Imaging',
@@ -29,7 +18,6 @@ interface WorkExp {
   current?: boolean; highlights: string[]
 }
 
-/* Work highlights trimmed — no cross-role repetition */
 const WORK: WorkExp[] = [
   {
     role: 'Specialist Sports Medicine',
@@ -52,8 +40,8 @@ const WORK: WorkExp[] = [
     highlights: [
       'Conducted pre-participation medical evaluations (PPEs) and athlete readiness assessments.',
       'Delivered on-field injury triage and emergency care at live sporting events.',
-      'Ensured full compliance with international anti-doping regulatory standards.',
-      'Engaged in clinical research to advance evidence-based sports medicine practice.',
+      'Ensured compliance with international anti-doping regulatory standards.',
+      'Contributed to clinical research to advance evidence-based sports medicine practice.',
     ],
   },
   {
@@ -84,11 +72,6 @@ export default function About() {
     return () => observer.disconnect()
   }, [])
 
-  const scrollToContact = (e: React.MouseEvent) => {
-    e.preventDefault()
-    document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })
-  }
-
   return (
     <section className="about section-py" id="about" ref={sectionRef}>
       <div className="container">
@@ -96,7 +79,7 @@ export default function About() {
         {/* ── Photo + Bio ── */}
         <div className="about-grid">
 
-          {/* Photo — clean frame, no floating badges */}
+          {/* Photo */}
           <div className="about-photo-wrap reveal">
             <div className="about-photo" role="img" aria-label="Dr. Praveen Ravi">
               <img
@@ -124,17 +107,19 @@ export default function About() {
             <div className="reveal reveal-delay-2">
               <p>
                 Dr. Praveen Ravi is a <strong>DOH &amp; DHA licensed Specialist in Sports Medicine</strong> at
-                FitClinic, Abu Dhabi. Holding an <strong>MD in Sports Medicine</strong> from Safdarjung Hospital,
-                New Delhi — where he topped the theory examination — and a <strong>FIFA Diploma in Football
-                Medicine</strong>, he brings 6+ years of evidence-based clinical expertise to every consultation.
+                FitClinic, Abu Dhabi. He holds an <strong>MD in Sports Medicine</strong> from Vardhman Mahavir
+                Medical College &amp; Safdarjung Hospital (GGSIPU, New Delhi) — where he topped the theory
+                examination — alongside a <strong>FIFA Diploma in Football Medicine</strong>.
               </p>
-              <p>
-                His focus is on <strong>non-operative, patient-centred care</strong>: accurate diagnosis through
-                advanced imaging, precise USG-guided procedures, regenerative therapy, and individualised
-                rehabilitation — getting athletes and active individuals safely back to peak performance.
+              <p style={{ marginTop: '1rem' }}>
+                With 6+ years of clinical experience, his focus is{' '}
+                <strong>non-operative, patient-centred care</strong>: precise diagnosis through advanced
+                imaging, USG-guided procedures, regenerative therapy, and individualised rehabilitation
+                designed to get athletes safely back to peak performance.
               </p>
             </div>
 
+            {/* Skills */}
             <div className="about-checklist reveal reveal-delay-3">
               {SKILLS.map(skill => (
                 <div className="about-check" key={skill}>
@@ -145,48 +130,14 @@ export default function About() {
             </div>
 
             <div className="reveal reveal-delay-4" style={{ marginTop: '2rem' }}>
-              <a href="#contact" className="btn btn-navy" onClick={scrollToContact}>
+              <a
+                href="#contact"
+                className="btn btn-navy"
+                onClick={e => { e.preventDefault(); document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' }) }}
+              >
                 Book a Consultation
               </a>
             </div>
-          </div>
-        </div>
-
-        {/* ── Qualifications ── */}
-        <div className="reveal" style={{ marginTop: '4rem' }}>
-          <p className="label" style={{ marginBottom: '1.25rem' }}>Qualifications &amp; Licences</p>
-          <div style={{
-            display: 'grid',
-            gridTemplateColumns: 'repeat(auto-fill, minmax(280px, 1fr))',
-            gap: '0.75rem',
-          }}>
-            {CREDENTIALS.map(c => (
-              <div
-                key={c.text}
-                className="cred-card"
-                style={{
-                  display: 'flex', alignItems: 'flex-start', gap: '0.75rem',
-                  padding: '1rem 1.125rem',
-                  background: 'var(--bg-light)',
-                  border: '1px solid var(--gray-200)',
-                  borderRadius: 'var(--r-md)',
-                  transition: 'border-color 0.2s, box-shadow 0.2s',
-                }}
-                onMouseEnter={e => {
-                  const el = e.currentTarget as HTMLDivElement
-                  el.style.borderColor = 'rgba(15,157,154,0.4)'
-                  el.style.boxShadow = 'var(--shadow-sm)'
-                }}
-                onMouseLeave={e => {
-                  const el = e.currentTarget as HTMLDivElement
-                  el.style.borderColor = 'var(--gray-200)'
-                  el.style.boxShadow = 'none'
-                }}
-              >
-                <c.icon size={18} style={{ color: 'var(--teal)', flexShrink: 0, marginTop: '1px' }} aria-hidden="true" />
-                <span style={{ fontSize: '0.875rem', color: 'var(--text-secondary)', lineHeight: 1.5 }}>{c.text}</span>
-              </div>
-            ))}
           </div>
         </div>
 
@@ -196,7 +147,6 @@ export default function About() {
           <div style={{ display: 'flex', flexDirection: 'column' }}>
             {WORK.map((job, idx) => (
               <div key={job.org} style={{ display: 'flex', gap: '1.5rem' }}>
-
                 {/* Spine */}
                 <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', flexShrink: 0 }}>
                   <div style={{
@@ -209,7 +159,6 @@ export default function About() {
                     <div style={{ width: 2, flex: 1, background: 'var(--gray-200)', margin: '4px 0' }} />
                   )}
                 </div>
-
                 {/* Content */}
                 <div style={{ paddingBottom: idx < WORK.length - 1 ? '2rem' : 0, flex: 1 }}>
                   <div style={{ display: 'flex', flexWrap: 'wrap', alignItems: 'flex-start', gap: '0.5rem', marginBottom: '0.25rem' }}>

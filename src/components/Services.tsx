@@ -50,6 +50,12 @@ const SERVICES: Service[] = [
     desc: 'Optimise physical performance through evidence-based sports science, load management, nutrition guidance and structured conditioning support.',
     tags: ['Performance', 'Load Management', 'Athlete Health'],
   },
+  {
+    icon: Activity,
+    title: 'VO2 Max Testing',
+    desc: 'Cardiorespiratory fitness assessment using VO2 max testing to evaluate aerobic capacity, guide training zones and optimise athletic performance.',
+    tags: ['Aerobic Capacity', 'Fitness Assessment', 'Training Zones'],
+  },
 ]
 
 /* ── Conditions by body part ───────────────────────────── */
@@ -293,7 +299,7 @@ export default function Services() {
             Specialised <span>Services</span>
           </h2>
           <p className="section-sub reveal reveal-delay-2">
-            From elite athletes to weekend warriors, we deliver world-class orthopaedic care tailored to your goals and lifestyle.
+            From elite athletes to weekend warriors, we deliver evidence-based sports medicine care tailored to your goals and lifestyle.
           </p>
         </div>
 

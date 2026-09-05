@@ -32,15 +32,16 @@ const INFO_CARDS = [
 ]
 
 const SERVICES = [
-  'Sports Injury Treatment',
-  'Arthroscopic Surgery',
-  'ACL & Ligament Repair',
-  'Shoulder & Elbow Care',
-  'Knee Specialist',
-  'Rehabilitation Program',
+  'Sports Injury Assessment',
+  'Musculoskeletal Consultation',
   'PRP / Regenerative Therapy',
+  'USG-Guided Injection',
+  'Rehabilitation Programme',
   'Injury Prevention Screening',
-  'General Orthopaedic Consultation',
+  'Pre-Participation Evaluation (PPE)',
+  'VO2 Max Testing',
+  'Sports Performance Medicine',
+  'General Sports Medicine Consultation',
 ]
 
 export default function Contact() {
@@ -140,8 +141,7 @@ export default function Contact() {
                 ))}
               </div>
 
-              {/* WhatsApp shortcut */}
-              {/* WhatsApp + Instagram side by side */}
+              {/* Social links */}
               <div className="reveal reveal-delay-4" style={{ display: 'flex', flexWrap: 'wrap', gap: '0.75rem', marginTop: '0.5rem' }}>
                 <a
                   href="https://wa.me/971547541252"

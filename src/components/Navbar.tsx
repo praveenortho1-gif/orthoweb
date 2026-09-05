@@ -92,18 +92,19 @@ export default function Navbar() {
             href="tel:+971547541252"
             className="btn btn-primary btn-sm"
             style={{ display: 'none' }}
-            aria-label="Call us"
+            aria-label="Call clinic"
           >
-            <Phone size={15} /> +971 547 541 252
+            <Phone size={15} /> Book Now
           </a>
           <style>{`@media(min-width:1024px){.nav-desktop-cta{display:inline-flex!important}}`}</style>
           <a
-            href="tel:+971547541252"
+            href="#contact"
             className="btn btn-primary btn-sm nav-desktop-cta"
             style={{ display: 'none' }}
-            aria-label="Call us"
+            aria-label="Book appointment"
+            onClick={e => { e.preventDefault(); handleNavClick('#contact') }}
           >
-            <Phone size={15} /> Book Now
+            Book Now
           </a>
 
           {/* Hamburger */}
