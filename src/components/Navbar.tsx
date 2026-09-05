@@ -2,12 +2,11 @@ import { useState, useEffect, useCallback } from 'react'
 import { Phone } from 'lucide-react'
 
 const NAV_LINKS = [
-  { href: '#home',         label: 'Home' },
-  { href: '#about',        label: 'About' },
-  { href: '#services',     label: 'Services' },
-  { href: '#why-us',       label: 'Why Us' },
-  { href: '#testimonials', label: 'Testimonials' },
-  { href: '#contact',      label: 'Contact' },
+  { href: '#home',     label: 'Home' },
+  { href: '#about',    label: 'About' },
+  { href: '#services', label: 'Services' },
+  { href: '#why-us',   label: 'Why Us' },
+  { href: '#contact',  label: 'Contact' },
 ]
 
 export default function Navbar() {

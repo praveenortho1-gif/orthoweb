@@ -16,7 +16,7 @@ const TESTIMONIALS: Testimonial[] = [
     name: 'Ahmed M.',
     role: 'Professional Footballer',
     stars: 5,
-    text: "After my ACL tear I thought my career was over. Dr. Praveen's technique and guidance through recovery was exceptional. I was back on the pitch in 7 months — stronger than before.",
+    text: "After my ACL tear I thought my career was over. Dr. Praveen's rehabilitation plan and clinical guidance were exceptional. I was back on the pitch in 7 months — stronger than before.",
     featured: true,
   },
   {
@@ -24,21 +24,21 @@ const TESTIMONIALS: Testimonial[] = [
     name: 'Sarah K.',
     role: 'Marathon Runner',
     stars: 5,
-    text: "Dr. Praveen diagnosed my knee issue when two other clinics missed it. Surgery was smooth and the aftercare was thorough. I completed the Abu Dhabi Marathon 6 months post-op.",
+    text: "Dr. Praveen diagnosed my knee issue when two other clinics missed it. His treatment plan and aftercare were thorough. I completed the Abu Dhabi Marathon 6 months later.",
   },
   {
     initials: 'RJ',
     name: 'Raj J.',
     role: 'Tennis Coach',
     stars: 5,
-    text: "Years of shoulder pain resolved after arthroscopic surgery. The difference is night and day. I can coach and play again without any discomfort. Highly, highly recommend.",
+    text: "Years of shoulder pain resolved after Dr. Praveen's targeted treatment and PRP therapy. The difference is night and day. I can coach and play again without any discomfort.",
   },
   {
     initials: 'FA',
     name: 'Fatima A.',
     role: 'CrossFit Athlete',
     stars: 5,
-    text: "I had a rotator cuff repair and was back to light training in 10 weeks. The team at FitClinic genuinely care about your recovery, not just the surgery.",
+    text: "Dr. Praveen's rehabilitation programme got me back to light training in 10 weeks. The team at FitClinic genuinely care about your recovery and long-term wellbeing.",
   },
   {
     initials: 'KP',
@@ -52,7 +52,7 @@ const TESTIMONIALS: Testimonial[] = [
     name: 'Omar T.',
     role: 'Youth Football Coach',
     stars: 5,
-    text: "Several players from my team have been seen by Dr. Praveen. Every single one has had a great outcome. He is our go-to orthopaedic specialist in Abu Dhabi.",
+    text: "Several players from my team have been seen by Dr. Praveen. Every single one has had a great outcome. He is our go-to sports medicine specialist in Abu Dhabi.",
   },
 ]
 

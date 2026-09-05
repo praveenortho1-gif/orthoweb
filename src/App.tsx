@@ -4,7 +4,7 @@ import Hero         from './components/Hero'
 import About        from './components/About'
 import Services     from './components/Services'
 import Expertise    from './components/Expertise'
-import Testimonials from './components/Testimonials'
+// Testimonials hidden — real reviews to be added later
 import Contact      from './components/Contact'
 import Footer       from './components/Footer'
 
@@ -17,7 +17,6 @@ export default function App() {
         <About />
         <Services />
         <Expertise />
-        <Testimonials />
         <Contact />
       </main>
       <Footer />

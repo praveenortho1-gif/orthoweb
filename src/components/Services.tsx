@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from 'react'
 import {
-  Activity, Scissors, Bone, Dumbbell, CircleDot, HeartPulse, Zap, Shield,
+  Activity, Stethoscope, HeartPulse, Zap, Shield, Brain,
   ChevronDown,
 } from 'lucide-react'
 import type { LucideIcon } from 'lucide-react'
@@ -16,51 +16,39 @@ interface Service {
 const SERVICES: Service[] = [
   {
     icon: Activity,
-    title: 'Sports Injury Treatment',
-    desc: 'Comprehensive diagnosis and management of acute and chronic sports injuries — from sprains and strains to complex ligament tears.',
-    tags: ['Acute Injuries', 'Overuse Injuries', 'Fractures'],
+    title: 'Sports Injury Assessment & Treatment',
+    desc: 'Accurate diagnosis and non-operative management of acute and chronic sports injuries — sprains, tendinopathies, muscle tears and overuse conditions.',
+    tags: ['Acute Injuries', 'Overuse Injuries', 'Tendinopathies'],
   },
   {
-    icon: Scissors,
-    title: 'Arthroscopic Surgery',
-    desc: 'Minimally invasive keyhole surgery for joints. Smaller incisions, less pain, faster return to activity.',
-    tags: ['Knee', 'Shoulder', 'Ankle', 'Hip'],
-  },
-  {
-    icon: Bone,
-    title: 'ACL & Ligament Repair',
-    desc: 'State-of-the-art ACL, PCL and multi-ligament reconstruction using the latest graft techniques and protocols.',
-    tags: ['ACL', 'PCL', 'MCL', 'Multi-Ligament'],
-  },
-  {
-    icon: Dumbbell,
-    title: 'Shoulder & Elbow Care',
-    desc: "Rotator cuff repair, shoulder stabilisation, SLAP repairs, tennis elbow and golfer's elbow treatment.",
-    tags: ['Rotator Cuff', 'Instability', 'Tennis Elbow'],
-  },
-  {
-    icon: CircleDot,
-    title: 'Knee Specialist',
-    desc: 'Meniscus repair and transplantation, cartilage restoration, patella disorders and partial knee replacement.',
-    tags: ['Meniscus', 'Cartilage', 'Patella', 'Knee OA'],
-  },
-  {
-    icon: HeartPulse,
-    title: 'Rehabilitation Programs',
-    desc: 'Structured, sport-specific rehab programmes designed in partnership with expert physiotherapists to ensure optimal recovery.',
-    tags: ['Post-Op Rehab', 'Return to Sport', 'Prevention'],
+    icon: Stethoscope,
+    title: 'Musculoskeletal Consultations',
+    desc: 'Comprehensive clinical evaluations with advanced imaging interpretation (X-ray, MRI, CT, ultrasound) to identify the root cause of pain and dysfunction.',
+    tags: ['X-Ray / MRI', 'Ultrasound', 'Clinical Assessment'],
   },
   {
     icon: Zap,
     title: 'PRP & Regenerative Therapy',
-    desc: 'Platelet-Rich Plasma injections and regenerative medicine to accelerate healing without surgery where clinically appropriate.',
-    tags: ['PRP', 'Injections', 'Non-Surgical'],
+    desc: 'Platelet-Rich Plasma and regenerative medicine injections to accelerate tissue healing for tendinopathies, ligament injuries and joint conditions.',
+    tags: ['PRP', 'USG-Guided', 'Non-Surgical'],
+  },
+  {
+    icon: HeartPulse,
+    title: 'Rehabilitation Programmes',
+    desc: 'Structured, sport-specific rehab plans designed in collaboration with physiotherapists — tailored to your biomechanics, goals and return-to-sport timeline.',
+    tags: ['Rehab Plans', 'Return to Sport', 'Post-Injury'],
   },
   {
     icon: Shield,
     title: 'Injury Prevention & Screening',
-    desc: 'Pre-participation screening and biomechanical assessments for teams and individual athletes to prevent injuries before they occur.',
-    tags: ['Screening', 'Biomechanics', 'Teams'],
+    desc: 'Pre-participation medical evaluations, biomechanical assessments and customised prevention programmes for individuals, teams and sports clubs.',
+    tags: ['PPE', 'Biomechanics', 'Teams & Clubs'],
+  },
+  {
+    icon: Brain,
+    title: 'Sports Performance Medicine',
+    desc: 'Optimise physical performance through evidence-based sports science, load management, nutrition guidance and structured conditioning support.',
+    tags: ['Performance', 'Load Management', 'Athlete Health'],
   },
 ]
 
