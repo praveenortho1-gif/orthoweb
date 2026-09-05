@@ -199,17 +199,38 @@ export default function Contact() {
                 </a>
               </div>
 
-              {/* Map placeholder */}
-              <div
-                className="map-placeholder reveal reveal-delay-5"
-                role="button"
-                tabIndex={0}
-                aria-label="View FitClinic on Google Maps"
-                onClick={() => window.open('https://share.google/igttb5Hie2NpJSmlY', '_blank')}
-                onKeyDown={e => e.key === 'Enter' && window.open('https://share.google/igttb5Hie2NpJSmlY', '_blank')}
-              >
-                <MapPin size={28} aria-hidden="true" />
-                <span>View FitClinic on Google Maps</span>
+              {/* Embedded map */}
+              <div className="reveal reveal-delay-5" style={{ marginTop: '1.5rem', borderRadius: 'var(--r-lg)', overflow: 'hidden', border: '1px solid var(--gray-200)', boxShadow: 'var(--shadow-sm)' }}>
+                <iframe
+                  title="FitClinic Abu Dhabi — Google Maps"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3631.2!2d54.3773!3d24.4539!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5e665c8fbdaa89%3A0x79baed1234da8ca1!2sFitClinic%20Exercise%20and%20Sport%20Medicine!5e0!3m2!1sen!2sae!4v1699999999999!5m2!1sen!2sae"
+                  width="100%"
+                  height="260"
+                  style={{ border: 0, display: 'block' }}
+                  allowFullScreen
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  aria-label="FitClinic location on Google Maps"
+                />
+                <a
+                  href="https://share.google/igttb5Hie2NpJSmlY"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  style={{
+                    display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '0.5rem',
+                    padding: '0.75rem',
+                    background: 'var(--bg-light)',
+                    borderTop: '1px solid var(--gray-200)',
+                    fontSize: '0.8125rem', fontWeight: 600,
+                    color: 'var(--teal)',
+                    transition: 'background 0.2s',
+                  }}
+                  onMouseEnter={e => (e.currentTarget.style.background = 'var(--teal-light)')}
+                  onMouseLeave={e => (e.currentTarget.style.background = 'var(--bg-light)')}
+                >
+                  <MapPin size={14} aria-hidden="true" />
+                  Open in Google Maps
+                </a>
               </div>
             </div>
 
