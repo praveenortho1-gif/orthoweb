@@ -130,6 +130,34 @@ const CONDITION_GROUPS: ConditionGroup[] = [
       'IT Band (ITB) Syndrome',
     ],
   },
+  {
+    emoji: '🦶',
+    area: 'Foot & Ankle',
+    color: '#0d6e6e',
+    conditions: [
+      'Achilles Tendinitis',
+      'Plantar Fasciitis',
+      'Ankle Sprain',
+    ],
+  },
+  {
+    emoji: '🔄',
+    area: 'Neck',
+    color: '#1e5a8a',
+    conditions: [
+      'Neck Pain',
+      'Cervical Spondylosis',
+    ],
+  },
+  {
+    emoji: '🧍',
+    area: 'Low Back',
+    color: '#164f7a',
+    conditions: [
+      'Low Back Pain',
+      'Lumbar Spondylosis',
+    ],
+  },
 ]
 
 /* ── Accordion item ────────────────────────────────────── */
